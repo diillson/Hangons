@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Hangons - A Hangouts.json parser</title>
+    <title>Cortex-Hangouts - Decodificador de Hangouts.json</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <meta name="description" content="A completely client side Hangouts.json parser to convert your json file from hangouts to a preferred format">
+    <meta name="description" content="Decodificador de arquivo Hangouts.Json">
     <meta name="author" content="David Byrne">
     <meta name="theme-color" content="#1AA260">
     <link rel="icon" sizes="192x192" type="image/png" href="images/favicon.png">
@@ -33,8 +33,8 @@
                 </button>
                 <img src="images/Hangons3.png" class="pull-left " id="logo" alt="Hangons Logo">
                 <!--Source for logo: http://romannurik.github.io/AndroidAssetStudio/ -->
-                <a class="navbar-brand" href="index.html">Hangons</a>
-                <p class="navbar-text hidden-xs">A clientside hangouts.json parser</p>
+                <a class="navbar-brand" href="index.html">Cortex-Hangouts Decoder</a>
+                <p class="navbar-text hidden-xs">Decodificador de hangouts.json cortex-intelligence</p>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -47,8 +47,8 @@
 
     <div id="mainContent" class="container">
         <div class="row">
-            First go to <a href="https://takeout.google.com/settings/takeout" target="_blank">Google Takeout</a> and download
-            your hangouts data. Extract the Hangouts.json file from the zip and upload it here.
+            Primeiro acesse <a href="https://takeout.google.com/settings/takeout" target="_blank">Google Takeout</a> e realize o download
+            do seu hangouts data. extraia o Hangouts.json do arquivo ZIP.
 
             <span class="input-group-btn">
                 <span class="btn btn-default btn-file colouredButton">
@@ -63,7 +63,7 @@
             <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4">
                 <div class="alert alert-dismissible alert-danger">
                     <button type="button" class="close" data-dismiss="alert">&#10006;</button>
-                    <strong>The chosen file cannot be parsed</strong>
+                    <strong>O arquivo escolhido impossibilitado de ser analisado</strong>
                     <p id="cannotParseAlertDes"></p>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4">
                 <div class="alert alert-dismissible alert-warning">
                     <button type="button" class="close" data-dismiss="alert">&#10006;</button>
-                    <strong>Certain messages were not recorded</strong>
+                    <strong>Certas mensagem falharam</strong>
                     <p>We didn't recognise the format of some of the message(s) so they couldn't be backed up.
                         If you report the console messages (f12)
                         <a href='https://docs.google.com/forms/d/1YEmJ5ScZbtJ6_U6RtpCLdhoSZs1i6kMipM0jVOBQnpc/viewform?usp=send_form'>
@@ -92,32 +92,32 @@
         </div>
 
         <div class="row">
-            Now choose what format you'd like it in. The dropdown box gives more information about the file types.
+            Agora escolha o formato que deseja. A caixa suspensa fornece mais informacoes sobre os tipos de arquivo.
             <br>
             <div class="btn-group spacedButton">
-                <a href="#" class="btn btn-default disabled colouredButton" id="jsonBtn">Simplified JSON</a>
+                <a href="#" class="btn btn-default disabled colouredButton" id="jsonBtn">JSON Simples</a>
                 <a href="#" class="btn btn-default dropdown-toggle colouredButton dropdown" data-toggle="dropdown" aria-expanded="false"><span class="caret brightText"></span></a>
                 <span class="dropdown-menu dataDescription">
                     <span  class="dataDescription">
-                    <abbr title="JavaScript Object Natation">JSON</abbr> array of conversation objects and each conversation contains an array of participants and an
-                    array of message objects. Each message object has a sender, time and content attribute.
+                    <abbr title="JavaScript Object Natation">JSON</abbr> matriz de objetos de conversa e cada conversa contem uma serie de participantes e um
+                    matriz de objetos de mensagem. Cada objeto de mensagem possui um atributo de remetente, hora e conteudo.
                     </span>
                 </span>
             </div>
 
             <div class="btn-group spacedButton">
-                <a href="#" class="btn btn-default disabled colouredButton" id="txtBtn">Plain Text</a>
+                <a href="#" class="btn btn-default disabled colouredButton" id="txtBtn">Texto Simples</a>
                 <a href="#" class="btn btn-default dropdown-toggle colouredButton dropdown" data-toggle="dropdown" aria-expanded="false"><span class="caret brightText"></span></a>
                 <span class="dropdown-menu dataDescription">
-                    A plain .txt file with the sender, time, date and content with one message's attributes per line.
+                    Um arquivo .txt simples com o remetente, hora, data e conteudo com os atributos de uma mensagem por linha.
                 </span>
             </div>
 
             <div class="btn-group spacedButton">
-                <a href="#" class="btn btn-default disabled colouredButton" id="csvBtn">Comma Separated Value</a>
+                <a href="#" class="btn btn-default disabled colouredButton" id="csvBtn">Valor separado por virgula</a>
                 <a href="#" class="btn btn-default dropdown-toggle colouredButton dropdown" data-toggle="dropdown" aria-expanded="false"><span class="caret brightText"></span></a>
                 <span class="dropdown-menu dataDescription">
-                    A .csv file with the sender, time, date and content separated with commas. One message is printed per line.
+                    Um arquivo .csv com remetente, hora, data e conteudo separados por virgulas. Uma mensagem e impressa por linha.
                 </span>
             </div>
 
@@ -125,7 +125,7 @@
                 <a href="#" class="btn btn-default disabled colouredButton" id="htmlBtn">HTML</a>
                 <a href="#" class="btn btn-default dropdown-toggle colouredButton dropdown" data-toggle="dropdown" aria-expanded="false"><span class="caret  brightText"></span></a>
                 <span class="dropdown-menu  dataDescription">
-                    A <abbr title="Hyper Text Markup Language">HTML</abbr> file with the messages styled like the hangouts interface you're used to.
+                    A <abbr title="Hyper Text Markup Language">HTML</abbr> arquivo com as mensagens no estilo da interface do hangouts que voce esta acostumado.
                 </span>
             </div>
         </div>
@@ -143,7 +143,7 @@
             </div>
 
             <div class="fileButton" ng-hide="!angFiles">
-                <a href="#" class="btn btn-default colouredButton fileButton" ng-click="angDownloadAll()"> Download All (Chrome doesn't allow too many downloads, use Firefox if you have a lot of chats) </a>
+                <a href="#" class="btn btn-default colouredButton fileButton" ng-click="angDownloadAll()"> Download All (O Chrome nao permite muitos downloads, use o Firefox se voce tiver muitos chats) </a>
             </div>
 
             <br/>
