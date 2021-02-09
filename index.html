@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="description" content="Decodificador de arquivo Hangouts.Json">
-    <meta name="author" content="David Byrne">
+    <meta name="author" content="Edilson Freitas">
     <meta name="theme-color" content="#1AA260">
     <link rel="icon" sizes="192x192" type="image/png" href="images/favicon.png">
 
@@ -91,15 +91,15 @@
         </div>
 
         <div class="row">
-            Agora escolha o formato que deseja. A caixa suspensa fornece mais informacoes sobre os tipos de arquivo.
+            Agora escolha o formato que deseja. A caixa suspensa fornece mais informações sobre os tipos de arquivo.
             <br>
             <div class="btn-group spacedButton">
                 <a href="#" class="btn btn-default disabled colouredButton" id="jsonBtn">JSON Simples</a>
                 <a href="#" class="btn btn-default dropdown-toggle colouredButton dropdown" data-toggle="dropdown" aria-expanded="false"><span class="caret brightText"></span></a>
                 <span class="dropdown-menu dataDescription">
                     <span  class="dataDescription">
-                    <abbr title="JavaScript Object Natation">JSON</abbr> matriz de objetos de conversa e cada conversa contem uma serie de participantes e um
-                    matriz de objetos de mensagem. Cada objeto de mensagem possui um atributo de remetente, hora e conteudo.
+                    <abbr title="JavaScript Object Natation">JSON</abbr> matriz de objetos de conversa e cada conversa contem uma série de participantes e um
+                    matriz de objetos de mensagem. Cada objeto de mensagem possui um atributo de remetente, hora e conteúdo.
                     </span>
                 </span>
             </div>
@@ -108,15 +108,15 @@
                 <a href="#" class="btn btn-default disabled colouredButton" id="txtBtn">Texto Simples</a>
                 <a href="#" class="btn btn-default dropdown-toggle colouredButton dropdown" data-toggle="dropdown" aria-expanded="false"><span class="caret brightText"></span></a>
                 <span class="dropdown-menu dataDescription">
-                    Um arquivo .txt simples com o remetente, hora, data e conteudo com os atributos de uma mensagem por linha.
+                    Um arquivo .txt simples com o remetente, hora, data e conteúdo com os atributos de uma mensagem por linha.
                 </span>
             </div>
 
             <div class="btn-group spacedButton">
-                <a href="#" class="btn btn-default disabled colouredButton" id="csvBtn">Valor separado por virgula</a>
+                <a href="#" class="btn btn-default disabled colouredButton" id="csvBtn">Valor separado por vírgula</a>
                 <a href="#" class="btn btn-default dropdown-toggle colouredButton dropdown" data-toggle="dropdown" aria-expanded="false"><span class="caret brightText"></span></a>
                 <span class="dropdown-menu dataDescription">
-                    Um arquivo .csv com remetente, hora, data e conteudo separados por virgulas. Uma mensagem e impressa por linha.
+                    Um arquivo .csv com remetente, hora, data e conteúdo separados por vírgulas. Uma mensagem e impressa por linha.
                 </span>
             </div>
 
@@ -124,7 +124,7 @@
                 <a href="#" class="btn btn-default disabled colouredButton" id="htmlBtn">HTML</a>
                 <a href="#" class="btn btn-default dropdown-toggle colouredButton dropdown" data-toggle="dropdown" aria-expanded="false"><span class="caret  brightText"></span></a>
                 <span class="dropdown-menu  dataDescription">
-                    A <abbr title="Hyper Text Markup Language">HTML</abbr> arquivo com as mensagens no estilo da interface do hangouts que voce esta acostumado.
+                    A <abbr title="Hyper Text Markup Language">HTML</abbr> arquivo com as mensagens no estilo da interface do hangouts que você está acostumado.
                 </span>
             </div>
         </div>
@@ -142,7 +142,7 @@
             </div>
 
             <div class="fileButton" ng-hide="!angFiles">
-                <a href="#" class="btn btn-default colouredButton fileButton" ng-click="angDownloadAll()"> Download All (O Chrome nao permite muitos downloads, use o Firefox se voce tiver muitos chats) </a>
+                <a href="#" class="btn btn-default colouredButton fileButton" ng-click="angDownloadAll()"> Download All (O Chrome nao permite muitos downloads, use o Firefox se você tiver muitos chats) </a>
             </div>
 
             <br/>
